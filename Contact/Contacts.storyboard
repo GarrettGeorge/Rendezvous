@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="Jeb-E5-deL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts-->
+        <scene sceneID="TmQ-al-EEN">
+            <objects>
+                <viewController storyboardIdentifier="ContactsList" autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Jeb-E5-deL" customClass="ContactsViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3T-gp-zQU"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFw-Nb-nzz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3yQ-GZ-cUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ian-Vm-YLb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="655"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ian-Vm-YLb" secondAttribute="trailing" id="Bo0-Mp-7hu"/>
+                            <constraint firstItem="Ian-Vm-YLb" firstAttribute="top" secondItem="G3T-gp-zQU" secondAttribute="bottom" id="FBE-g7-lBQ"/>
+                            <constraint firstItem="Ian-Vm-YLb" firstAttribute="leading" secondItem="3yQ-GZ-cUQ" secondAttribute="leading" id="dTq-sv-1xb"/>
+                            <constraint firstItem="Ian-Vm-YLb" firstAttribute="bottom" secondItem="wFw-Nb-nzz" secondAttribute="top" constant="8" id="mCQ-y3-Fxf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="VZN-eC-aAE">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="IQx-0h-xH3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ian-Vm-YLb" id="lbU-w8-Oyf"/>
+                        <segue destination="JCy-L7-U6U" kind="push" identifier="ContactsListToDetail" id="Uuu-HS-6NZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hl-3R-mw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269" y="660"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="em4-6X-Bwb">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="JCy-L7-U6U" customClass="ContactDetailViewController" customModule="Rendezvous" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UvN-XC-FNZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="FeK-IZ-fxy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6z4-uI-DvP">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ncB-bc-Fjg"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udt-WX-tqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Settings" width="29" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
